@@ -68,7 +68,7 @@ img.emoji {
             border-bottom: 3px solid #f99400;
         }
 
-        .navbar-area.is-sticky .sparsity-nav { background-color: #ffffff; }
+        .navbar-area.is-sticky .sparsity-nav { background-color: blue; }
         .footer-area { background-color: #15171a; }
         .copyright-area { background-color: #000000; }
 
@@ -146,6 +146,40 @@ var dateData = {"endTime":"12\/07\/2020"};
 			padding-bottom: 20px;
 		}
 	}
+
+	.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #363B3E;
+}
+.text {
+  color: white;
+  /*font-size: 20px;*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.single-services-box:hover .overlay {
+  opacity: 1;
+}
+.single-services-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 	
 </style>
 </head>
@@ -182,7 +216,10 @@ var dateData = {"endTime":"12\/07\/2020"};
 														<img width="136" height="37" src="wp-content/uploads/2019/10/albion-logo-1-1.png" class="main-logo" alt="Albion">								<img width="136" height="37" src="wp-content/uploads/2019/10/albion-black-1-1.png" class="optional-logo" alt="Albion">					</a>
 
 					<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
-						<div class="menu-header-menu-container"><ul id="menu-header-menu" class="navbar-nav"><li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-573" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children dropdown active menu-item-573 nav-item"><a title="Home" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-573">Our Expertise</a>
+						<div class="menu-header-menu-container"><ul id="menu-header-menu" class="navbar-nav">
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-231" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown menu-item-231 nav-item"><a title="Pages" href="./index.html">Home</a>
+							</li>
+							<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-573" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children dropdown active menu-item-573 nav-item"><a title="Home" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-573">Our Expertise</a>
 <ul class="dropdown-menu" aria-labelledby="menu-item-dropdown-573" role="menu">
 	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-10" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-466 current_page_item active menu-item-10 nav-item"><a title="Home One" href="./service/robotic-process-automation/index.html" class="dropdown-item">Enterprise App Development</a></li>
 	<li itemscope="itemscope" itemtype="https://www.schema.org/SiteNavigationElement" id="menu-item-575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-575 nav-item"><a title="Home Two" href="./service/robotic-process-automation/artificial-intelligence.html" class="dropdown-item">Artificial Intelligence</a></li>
@@ -390,72 +427,144 @@ var dateData = {"endTime":"12\/07\/2020"};
                         </div>
                     
                     <div class="row">                         <div class="col-lg-4 col-md-6 col-sm-6">
-                            <a href="./service/robotic-process-automation/index.html"><div class="single-services-box 
+                            <a href="./service/robotic-process-automation/index.html">
+                            	<div class="single-services-box 
                             	single-services-box-level1">
-                                <div class="icon">
+                            	<div class="">
+                                <div class="icon mx-auto">
                                     <i class="flaticon-ceo"></i>
                                 </div>
 
                                 <h3>Enterprise App Development</h3>
-                                <p>We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable. </p>
+                                <!-- <p>We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable. </p> -->
+                            <div class="overlay">
+                            	<div class="text">We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable.</div>
+                            </div>
+                            </div>
                             </div></a>
                         </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-6">
 							<a href="./service/robotic-process-automation/artificial-intelligence.html">                          	
-                            <div class="single-services-box single-services-box-level1">
+                            <!-- <div class="single-services-box single-services-box-level1">
                                 <div class="icon">
                                     <i class="flaticon-gear"></i>
                                 </div>
 
                                 <h3>Artificial Intelligence</h3>
                                 <p>We create advanced technologies that decodes complex data into actionable insights and enriching information that will accelerate the internal processes in an organization. </p>
+                            </div> -->
+                            <div class="single-services-box 
+                            	single-services-box-level1">
+                            	<div class="">
+                                <div class="icon mx-auto">
+                                    <i class="flaticon-gear"></i>
+                                </div>
+
+                                <h3>Artificial Intelligence</h3>
+                                <!-- <p>We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable. </p> -->
+                            <div class="overlay">
+                            	<div class="text">We create advanced technologies that decodes complex data into actionable insights and enriching information that will accelerate the internal processes in an organization. </div>
                             </div>
+                            </div>
+                            </div>   
                             </a>
                         </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-6">
-							<a href="./service/robotic-process-automation/analytics.html">                                                	
-                            <div class="single-services-box">
+							<a href="./service/robotic-process-automation/analytics.html">   <div class="single-services-box 
+                            	single-services-box-level1">
+                            	<div class="">
+                                <div class="icon mx-auto">
+                                    <i class="flaticon-molecular"></i>
+                                </div>
+
+                                <h3>Analytics</h3>
+                                <!-- <p>We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable. </p> -->
+                            <div class="overlay">
+                            	<div class="text">Virtual knowledge, knowledge visualization, and knowledge extraction in a period of time have taken business decision-making to a different level. Our clients focus heavily on advanced knowledge visualization systems, to stay drive innovation and optimization.</div>
+                            </div>
+                            </div>
+                            </div>                                             	
+                            <!-- <div class="single-services-box">
                                 <div class="icon">
                                     <i class="flaticon-molecular"></i>
                                 </div>
 
                                 <h3>Analytics</h3>
                                 <p>Virtual knowledge, knowledge visualization, and knowledge extraction in a period of time have taken business decision-making to a different level. Our clients focus heavily on advanced knowledge visualization systems, to stay drive innovation and optimization. </p>
-                            </div>
+                            </div> -->
                             </a>
                         </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-6">
                              <a href="./service/robotic-process-automation/api-led-integration.html">                   	
-                            <div class="single-services-box single-services-box-level2">
+                            <!-- <div class="single-services-box single-services-box-level2">
                                 <div class="icon">
                                     <i class="flaticon-locked"></i>
                                 </div>
 
                                 <h3>API led Integration</h3>
                                 <p>To meet current needs there's a replacement construct, API-led property that builds on the central tenets of SOA, which re-imagines its implementation for today’s distinctive challenges.API-led property is an Associate in nursing approaches that define strategies for connecting and exploring your assets.</p>
+                            </div> -->
+                            <div class="single-services-box 
+                            	single-services-box-level1">
+                            	<div class="">
+                                <div class="icon mx-auto">
+                                    <i class="flaticon-locked"></i>
+                                </div>
+
+                                <h3>API led Integration</h3>
+                                <!-- <p>We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable. </p> -->
+                            <div class="overlay">
+                            	<div class="text">To meet current needs there's a replacement construct, API-led property that builds on the central tenets of SOA, which re-imagines its implementation for today’s distinctive challenges.API-led property is an Associate in nursing approaches that define strategies for connecting and exploring your assets.</div>
                             </div>
+                            </div>
+                            </div> 
                             </a>
                         </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-6">
-                            <div class="single-services-box single-services-box-level2">
-                                <div class="icon">
+                            <div class="single-services-box single-services-box-level1">
+                                <!-- <div class="icon">
                                     <i class="flaticon-automatic"></i>
                                 </div>
 
                                 <h3><a href="service/automatic-optimization/index.html">SAP Modernization</a></h3>
-                                <p>To increase productivity and harness the true potential of SAP, we empower our clients with solutions to modernize their platforms with the latest technology available.</p>
+                                <p>To increase productivity and harness the true potential of SAP, we empower our clients with solutions to modernize their platforms with the latest technology available.</p> -->
+                                <div class="">
+                                <div class="icon mx-auto">
+                                    <i class="flaticon-automatic"></i>
+                                </div>
+
+                                <h3>SAP Modernization</h3>
+                                <!-- <p>We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable. </p> -->
+                            <div class="overlay">
+                            	<div class="text">To increase productivity and harness the true potential of SAP, we empower our clients with solutions to modernize their platforms with the latest technology available.</div>
+                            </div>
+                            </div>
                             </div>
                         </div>
                                                 <div class="col-lg-4 col-md-6 col-sm-6">
                                                 	<a href="./service/robotic-process-automation/business-process-automation.html">
-                            <div class="single-services-box single-services-box-level2">
+                           <!--  <div class="single-services-box single-services-box-level2">
                                 <div class="icon">
                                     <i class="flaticon-income"></i>
                                 </div>
 
                                 <h3>Business Process Automation</h3>
                                 <p>Business process automation is the use of technology to regulate processes through technology which are repeatable tasks. It accelerates work and this is done by routing data to the proper person at the proper time through user-defined rules and actions. BPA helps organizations contour processes like worker onboarding, accounts collectible, contract management and other tasks that require day-to-day attention. </p>
+                            </div> -->
+                            <div class="single-services-box 
+                            	single-services-box-level1">
+                            	<div class="">
+                                <div class="icon mx-auto">
+                                    <i class="flaticon-income"></i>
+                                </div>
+
+                                <h3>Business Process Automation</h3>
+                                <!-- <p>We build powerful applications for full-stack web, mobile and enterprise apps right from analysing the company’s core requirements to conceptualizing the end-deliverable. </p> -->
+                            <div class="overlay">
+                            	<div class="text w-75" >Business process automation is the use of technology to regulate processes through technology which are repeatable tasks. It accelerates work and this is done by routing data to the proper person at the proper time through user-defined rules and actions. BPA helps organizations contour processes like worker onboarding, accounts collectible, contract management and other tasks that require day-to-day attention.</div>
                             </div>
+                            </div>
+                            </div>   
                         </a>
                         </div>
                                             </div>
@@ -607,7 +716,7 @@ var dateData = {"endTime":"12\/07\/2020"};
 				<div class="elementor-widget-container">
 			
         <!-- Start Feedback Area -->
-                    <div class="feedback-area">
+               <!--      <div class="feedback-area">
                 <div class="feedback-slides owl-carousel owl-theme">                         <div class="row m-0">
                             <div class="col-lg-6 col-md-12 p-0">
                                 <div class="feedback-item">
@@ -661,7 +770,7 @@ var dateData = {"endTime":"12\/07\/2020"};
                             </div>
                         </div> 
                 </div>
-            </div>         <!-- End Feedback Area -->
+            </div>    -->      <!-- End Feedback Area -->
     		</div>
 				</div>
 						</div>
@@ -702,7 +811,7 @@ var dateData = {"endTime":"12\/07\/2020"};
         <div class="blog-area ptb-110">
             <div class="container">
                 <div class="section-title">
-                    <h2>Our Recent Story</h2>
+                    <h2>Blog</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
@@ -833,14 +942,13 @@ var dateData = {"endTime":"12\/07\/2020"};
 
                     <div class="col-lg-6 col-md-12 p-0">
                         <div class="free-trial-content">
-                            <h2>Start Your Free Trial</h2>
+                            <h2>Subscribe to our Newsletter!</h2>
 
                             <form class="newsletter-form" method="post" action="https://themes.envytheme.com/albion/Albion/?na=s" onsubmit="return newsletter_check(this)">                                <input type="email" class="input-newsletter"
                                     placeholder="Enter your business email here"
-                                    name="ne" required autocomplete="off"/>                                                                     <button type="submit"> Sign Up Free </button>                                
+                                    name="ne" required autocomplete="off"/>                                                                     <button type="submit"> Subscribe</button>                                
                             </form>
 
-                            <p>Test out the Machine Learning features for 14 days, no credit card required.</p>
                         </div>
                     </div>
                 </div>
@@ -868,19 +976,19 @@ var dateData = {"endTime":"12\/07\/2020"};
 								<a href="index.html">
 																			<img width="136" height="37" src="wp-content/uploads/2019/10/albion-logo-1-1.png" alt="Albion">								</a>
 								
-																	<p> Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan. </p> 							</div>
+																	<p> We're the Catalysts who drive your Digital Transformation.</p> 							</div>
 
 							        <ul class="social">
-                            <li><a href="#" target="_blank"><i class="flaticon-facebook-letter-logo"></i> </a>
+                            <li><a href="https://www.facebook.com" target="_blank"><i class="flaticon-facebook-letter-logo"></i> </a>
                 </li>
             
-                            <li><a href="#" target="_blank"><i class="flaticon-twitter"></i> </a>
+                            <li><a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i> </a>
                 </li>
                     
-                            <li><a href="#" target="_blank"><i class="flaticon-instagram-logo"></i> </a>
+                            <li><a href="https://www.instagram.com" target="_blank"><i class="flaticon-instagram-logo"></i> </a>
                 </li>
                         
-                            <li><a href="#" target="_blank"><i class="flaticon-youtube-play-button"></i> </a>
+                            <!-- <li><a href="#" target="_blank"><i class="flaticon-youtube-play-button"></i> </a> -->
                 </li>
                         
                         
@@ -891,25 +999,26 @@ var dateData = {"endTime":"12\/07\/2020"};
 					</div>
 
 										<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-footer-widget footer-wid widget widget_nav_menu"><h3 class="footer-wid-title">Services</h3><div class="menu-footer-menu-one-container"><ul id="menu-footer-menu-one" class="menu"><li id="menu-item-392" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-392"><a href="service/cognitive-automation/index.html">Cognitive Automation</a></li>
-<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-393"><a href="service/cognitive-engagement/index.html">Cognitive Engagement</a></li>
-<li id="menu-item-394" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-394"><a href="service/automatic-optimization/index.html">Automatic Optimization</a></li>
-<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-395"><a href="service/security-surveillance/index.html">Security &#038; Surveillance</a></li>
-<li id="menu-item-396" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-396"><a href="service/software-engineers/index.html">Software Engineers</a></li>
+						<div class="single-footer-widget footer-wid widget widget_nav_menu"><h3 class="footer-wid-title">Services</h3><div class="menu-footer-menu-one-container"><ul id="menu-footer-menu-one" class="menu"><li id="menu-item-392" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-392"><a href="service/robotic-process-automation/index.html">Enterprise App Development</a></li>
+<li id="menu-item-393" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-393"><a href="service/robotic-process-automation/artificial-intelligence.html">Artificial Intelligence</a></li>
+<li id="menu-item-394" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-394"><a href="service/robotic-process-automation/analytics.html">Analytics</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-service menu-item-395"><a href="service/robotic-process-automation/api-led-integration.html">API Led Integration</a></li>
 </ul></div></div>					</div> 
 										<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-footer-widget footer-wid widget widget_nav_menu"><h3 class="footer-wid-title">Quick Links</h3><div class="menu-footer-menu-two-container"><ul id="menu-footer-menu-two" class="menu"><li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="about-us/index.html">About Us</a></li>
-<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398"><a href="faq/index.html">FAQ</a></li>
-<li id="menu-item-401" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-401"><a href="blog/index.html">Blog</a></li>
-<li id="menu-item-582" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-582"><a href="pricing/index.html">Pricing</a></li>
+						<div class="single-footer-widget footer-wid widget widget_nav_menu"><h3 class="footer-wid-title">Quick Links</h3><div class="menu-footer-menu-two-container"><ul id="menu-footer-menu-two" class="menu">
+							<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="./services-1/index.html">Platforms</a></li>
+
+							<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-400"><a href="./service/robotic-process-automation/insurance.html">Industries</a></li>
+
+
+<li id="menu-item-582" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-582"><a href="./i-used-the-web-for-a-day-on-a-50-mb-budget/index.html">Blog</a></li>
 <li id="menu-item-397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-397"><a href="contact/index.html">Contact</a></li>
 </ul></div></div>					</div> 
 										<div class="col-lg-3 col-md-6 col-sm-6">
-						<div class="single-footer-widget footer-wid widget widget_text"><h3 class="footer-wid-title">Contacts</h3>			<div class="textwidget"><ul class="footer-contact-list">
-<li><span class="span">Address:</span> 2750 Quadra Street Victoria, Canada</li>
-<li><span class="span">Email:</span> <a href="#">albion@gmail.com</a></li>
-<li><span class="span">Phone:</span> <a href="#">+44 587 154756</a></li>
-<li><span class="span">Fax:</span> <a href="#">+44 785 4578964</a></li>
+						<div class="single-footer-widget footer-wid widget widget_text"><h3 class="footer-wid-title">Contact</h3>			<div class="textwidget"><ul class="footer-contact-list">
+<!-- <li><span class="span">Address:</span> 2750 Quadra Street Victoria, Canada</li> -->
+<!-- <li><span class="span">Email:</span> <a href="#">albion@gmail.com</a></li> -->
+<li><span class="span">Phone:</span> <a href="#">9892314735 / 9987791066</a></li>
 </ul>
 </div>
 		</div>					</div> 				</div>
@@ -918,14 +1027,15 @@ var dateData = {"endTime":"12\/07\/2020"};
 		<div class="copyright-area ">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="col-lg- col-md-3 col-sm-3">
 						<p>
-						Copyright 2019 <a href="#">Albion</a>. All Rights Reserved.						</p>
+						Powered By <a href="https://www.sortedworksinc.com">SortedWorksInc</a>	</p>
 					</div>
 
-					<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="col-lg-9 col-md-9 col-sm-9">
 						<div class="menu-footer-bottom-menu-container"><ul id="footer-bottom-menu-one" class="menu"><li id="menu-item-390" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-390"><a href="terms-conditions/index.html">Terms &#038; Conditions</a></li>
 <li id="menu-item-581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581"><a href="privacy-policy/index.html">Privacy Policy</a></li>
+<li>Copyright 2019 <a class="d-inline-block" href="#">Albion</a>. All Rights Reserved.	</li>
 </ul></div>					</div>
 				</div>
 			</div>
