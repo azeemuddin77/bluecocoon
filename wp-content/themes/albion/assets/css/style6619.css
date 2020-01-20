@@ -687,19 +687,20 @@ Navbar Area CSS
 }
 
 .navbar-area {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: auto;
   z-index: 999;
-  background-color: #363B3E;
+  background-color: transparent;
+  /*background-color: #363B3E;*/
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .navbar-area.is-sticky, .navbar-area.navbar-bg {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
