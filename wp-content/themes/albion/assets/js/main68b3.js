@@ -7,6 +7,77 @@
 			meanScreenWidth: "991"
         });
 
+
+         $("#submit").on("click",function(e){
+       e.preventDefault();
+       var name=$("#name").val()
+       var phone=$("#phone").val()
+       var email=$("#email").val()
+       var Msg=$("#msg").val()
+       var Subject=$("#subject").val()
+        msg={
+          name:"Name Field Cannot Be Blank",
+          phone:"Phone Field Cannot Be Blank",
+          email:"Email Field Cannot Be Blank",
+          Msg:"Message Field Cannot Be Blank",
+          Subject:"Message Field Cannot Be Blank"
+        }
+         if(name == "" || name==undefined || name==null){
+              alert(msg["name"]);
+            }
+        else if(phone == "" || phone==undefined || phone==null){
+          alert(msg["phone"]);
+        }
+        else if(email == "" || email==undefined || email==null){
+          alert(msg["email"]);
+        }
+        else if(Msg == "" || Msg==undefined || Msg==null){
+          alert(msg["Msg"]);
+        }
+        else{
+            if((name !== "" || name !== undefined) && (phone !== "" || phone !== undefined) && (email !== "" || email !== undefined) && (Msg !== "" || Msg !== undefined)){
+                    $.ajax({
+                        method: "POST",
+                        url: "https://pacific-coast-83227.herokuapp.com/orders/bluecocoon",
+                        dataType:"json",
+                        data: { name: name, phone: phone, email:email, Msg:Msg, Subject:Subject }
+                      })
+                      .done(function( data ) {
+                        console.log(data);
+                        $("input[type=text],input[type=email], textarea").val("");
+                      });
+            }
+        }
+                 
+      });
+
+         $("#subscribe").on("click",function(e){
+       e.preventDefault();
+       var email=$("#email").val()
+       var msg={
+          email:"Email Field Cannot Be Blank",
+        }
+         if(email == "" || email==undefined || email==null){
+              alert(msg["email"]);
+            }
+      
+        else{
+            if( email !== "" || email !== undefined){
+                    $.ajax({
+                        method: "POST",
+                        url: "https://pacific-coast-83227.herokuapp.com/orders/bluecocoon",
+                        dataType:"json",
+                        data: { name: "Subscribers mail id", phone: "", email:email, Msg:"", Subject:""}
+                      })
+                      .done(function( data ) {
+                        console.log(data);
+                        $("input[type=text],input[type=email], textarea").val("");
+                      });
+            }
+        }
+                 
+      });
+
         // Header Sticky
 		// $(window).on('scroll',function() {
   //           if ($(this).scrollTop() > 120){

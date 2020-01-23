@@ -120,7 +120,7 @@ var dateData = {"endTime":"12\/07\/2020"};
 <link rel="alternate" type="text/xml+oembed" href="../wp-json/oembed/1.0/embed5a9b?url=https%3A%2F%2Fthemes.envytheme.com%2Falbion%2Fcontact%2F&amp;format=xml" />
 		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
 		<link rel="icon" href="../wp-content/uploads/2019/10/favicon.png" type="image/gif" sizes="16x16">	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" charset="utf-8"></script> -->
 </head>
 
 <body class="page-template-default page page-id-290 no-sidebar elementor-default elementor-page elementor-page-290">
@@ -142,7 +142,7 @@ var dateData = {"endTime":"12\/07\/2020"};
 				<div class="sparsity-responsive-menu">
 					<div class="logo">
 						<a href="../index.html">
-																<img src="../wp-content/uploads/2019/10/albion-logo-1-1.png" class="main-logo" alt="Albion">									<img src="../wp-content/uploads/2019/10/albion-black-1-1.png" class="optional-logo" alt="Albion">						</a>
+																<img src="../wp-content/uploads/2019/10/bluecocoon-logo.png" class="main-logo" alt="Albion">									<img src="../wp-content/uploads/2019/10/albion-black-1-1.png" class="optional-logo" alt="Albion">						</a>
 					</div>
 				</div>
 			</div>
@@ -152,7 +152,7 @@ var dateData = {"endTime":"12\/07\/2020"};
 			<div class="container">
 				<nav class="navbar navbar-expand-md navbar-light">
 					<a class="navbar-brand" href="../index.html">
-														<img width="136" height="37" src="../wp-content/uploads/2019/10/albion-logo-1-1.png" class="main-logo" alt="Albion">								<img width="136" height="37" src="../wp-content/uploads/2019/10/albion-black-1-1.png" class="optional-logo" alt="Albion">					</a>
+														<img width="136" height="37" src="../wp-content/uploads/2019/10/bluecocoon-logo.png" class="main-logo" alt="Albion">								<img width="136" height="37" src="../wp-content/uploads/2019/10/albion-black-1-1.png" class="optional-logo" alt="Albion">					</a>
 
 					<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
 						<div class="menu-header-menu-container"><ul id="menu-header-menu" class="navbar-nav">
@@ -324,7 +324,7 @@ var dateData = {"endTime":"12\/07\/2020"};
 						<div class="single-footer-widget">
 							<div class="logo">
 								<a href="index.html">
-																			<img width="136" height="37" src="../wp-content/uploads/2019/10/albion-logo-1-1.png" alt="Albion">								</a>
+																			<img width="136" height="37" src="../wp-content/uploads/2019/10/bluecocoon-logo.png" alt="Albion">								</a>
 								
 																	<p> We are the Catalysts who drive your Technology Innovation.</p> 							</div>
 
@@ -410,50 +410,7 @@ var dateData = {"endTime":"12\/07\/2020"};
 <script  src='../wp-content/plugins/elementor/assets/lib/dialog/dialog.minfe9d.js?ver=4.7.3'></script>
 <script  src='../wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min05da.js?ver=4.0.2'></script>
 <script  src='../wp-content/plugins/elementor/assets/lib/swiper/swiper.min4f24.js?ver=4.4.6'></script>
- <script type="text/javascript">
-    $("#submit").on("click",function(e){
-       e.preventDefault();
-       var name=$("#name").val()
-       var phone=$("#phone").val()
-       var email=$("#email").val()
-       var Msg=$("#msg").val()
-       var Subject=$("#subject").val()
-        msg={
-          name:"Name Field Cannot Be Blank",
-          phone:"Phone Field Cannot Be Blank",
-          email:"Email Field Cannot Be Blank",
-          Msg:"Message Field Cannot Be Blank",
-          Subject:"Message Field Cannot Be Blank"
-        }
-         if(name == "" || name==undefined || name==null){
-              alert(msg["name"]);
-            }
-        else if(phone == "" || phone==undefined || phone==null){
-          alert(msg["phone"]);
-        }
-        else if(email == "" || email==undefined || email==null){
-          alert(msg["email"]);
-        }
-        else if(Msg == "" || Msg==undefined || Msg==null){
-          alert(msg["Msg"]);
-        }
-        else{
-            if((name !== "" || name !== undefined) && (phone !== "" || phone !== undefined) && (email !== "" || email !== undefined) && (Msg !== "" || Msg !== undefined)){
-                    $.ajax({
-                        method: "POST",
-                        url: "https://pacific-coast-83227.herokuapp.com/orders/bluecocoon",
-                        dataType:"json",
-                        data: { name: name, phone: phone, email:email, Msg:Msg, Subject:Subject }
-                      })
-                      .done(function( data ) {
-                        console.log(data);
-                        $("input[type=text],input[type=email], textarea").val("");
-                      });
-            }
-        }
-                 
-      });
-  </script>
+
 
 	</body>
 
